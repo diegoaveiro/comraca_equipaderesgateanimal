@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="pt">
 <head>
 
@@ -15,24 +15,122 @@
 </head>
 
 <body>
-<div class="logo">
-<a href="https://www.instagram.com/comraca_equipaderesgateanimal/" target="_blank">
-<img id="comracalogo" src="https://scontent.fopo4-1.fna.fbcdn.net/v/t39.30808-6/325430895_554458636570363_3865699528650794419_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGRtCGNGZJxA1AJw0suVK1HlMa140onj8SUxrXjSiePxJv0kD_YR9ugtlhjqbvW0Idmtfyvv-rcU76CgbUyUYgP&_nc_ohc=7ktL8MKI8QMAX_oYjbb&_nc_ht=scontent.fopo4-1.fna&oh=00_AfC1gi6LV4bwuC1AoAhsfvJil0K4MIqav3vr4dzqwmzHog&oe=648F64AE" alt="Com Raça Logo"
-width="100vw"></a>
-</div>
+<p id="todo">
+
+</p>
+<header>
+  
+  <div class="logo">
+    <a href="https://www.instagram.com/comraca_equipaderesgateanimal/" target="_blank">
+      <img class="comracalogo" id="comracalogo" src="./images/com_raca.jpg" 
+        alt="Com Raça Logo"
+        width="120vw"></a>
+          <input type="checkbox" id="nightmode" 
+            onclick="changeImage();changeImage2();changeImage3()" value="Change">
+          <label class="btn" for="nightmode"><!--<button id="night-mode-toggle">-->
+            <img id="dogs" src="./images/doglight.png" width="50em" height="50em" alt=""><!--</button>-->
+          </label>
+  </div>
+
+</header>
+
+<main>
 
 <!-- Swiper -->
 <div class="wrapper">
+
+  <!-- filters -->
+  
+<div class="labels">
+  <button id="filterButton" onclick="toggleFilters()"><img id="filterImage" src="images/filterdark.png" alt="" width="40vw"></button>
+  
+    <div id="filterContainer" style="display: none;">
+      <label id="sizeLabel" for="sizeFilter">Size</label>
+      <select id="sizeFilter" onchange="filterPets()">
+        <option value="">ALL</option>
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+        <option value="Giant">Giant</option>
+      </select>
+      <!-- <input type="text" id="nameFilter" oninput="filterPets()" /> -->
+
+      <label id="ageLabel" for="ageFilter">Age:</label>
+      <select id="ageFilter" onchange="filterPets()">
+        <option value="">ALL</option>
+        <option value="Puppy">Puppy</option>
+        <option value="Junior">Junior</option>
+        <option value="Adult">Adult</option>
+        <option value="Mature">Mature</option>
+        <option value="Senior">Senior</option>
+        <option value="Geriatric">Geriatric</option>
+      </select>
+      <!-- <input type="number" id="ageFilter" oninput="filterPets()" /> -->
+
+      <label id="sexLabel" for="sexFilter">Sex:</label>
+      <select id="sexFilter" onchange="filterPets()">
+        <option value="">All</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+
+      <label id="castredLabel" for="castratedFilter">Castrated:</label>
+      <input type="checkbox" id="castratedFilter" onchange="filterPets()" />
+      <button id="clear" onclick="clearFilters()">Clear</button>
+    </div>
+</div>
+
+<!-- <ul id="petList">
+  <li class="pet" data-name="Max" data-age="3" data-sex="Male" data-castrated="true">Max</li>
+  <li class="pet" data-name="Bella" data-age="5" data-sex="Female" data-castrated="false">Bella</li>
+  <li class="pet" data-name="Charlie" data-age="2" data-sex="Male" data-castrated="true">Charlie</li>
+</ul> -->
+
 <div class="swiper mySwiper">
-<div class="swiper-wrapper">
-<div class="swiper-slide"><a href="https://www.instagram.com/p/CsY-1lfsG44/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank"><img src="./images/dino.jpg" alt="" height="480px"></a></div>
-<div class="swiper-slide"><a href="https://www.instagram.com/p/CtMujf2t7wa/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank"><img src="./images/alvarito.jpg" alt="" height="480px"></a></div>
-<div class="swiper-slide"><a href="https://www.instagram.com/p/CsOQNK_NRFW/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank"><img src="./images/tomas.jpg" alt="" height="480px"></a></div>
-<div class="swiper-slide"><a href="https://www.instagram.com/p/CtRFwgBNqP6/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank"><img src="./images/kya.jpg" alt="" height="480px"></a></div>
-<div class="swiper-slide"><a href="https://www.instagram.com/p/CsgJesWIaOl/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank"><img src="./images/montanha.jpg" alt="" height="480px"></a></div>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <li class="pet" data-size="Small" data-age="Puppy" data-sex="Male" data-castrated="true">
+        <a href="https://www.instagram.com/p/CsY-1lfsG44/?utm_source=ig_web_copy_
+          link&igshid=MzRlODBiNWFlZA==" target="_blank">
+          <img src="/images/dino.jpg" alt="dino" height="480px">
+        </a>
+      </li>  
+    </div>
+
+    <div class="swiper-slide">
+      <li class="pet" data-size="Small" data-age="Puppy" data-sex="Male" data-castrated="false">
+        <a href="https://www.instagram.com/p/CtMujf2t7wa/?utm_source=ig_web_copy_
+          link&igshid=MzRlODBiNWFlZA==" target="_blank">
+          <img src="/images/alvarito.jpg" alt="alvarito" height="480px">
+        </a>
+      </li>
+    </div>
+
+    <div class="swiper-slide">
+      <li class="pet" data-size="Small" data-age="Adult" data-sex="Male" data-castrated="true">
+        <a href="https://www.instagram.com/p/CsOQNK_NRFW/?utm_source=ig_web_copy_
+          link&igshid=MzRlODBiNWFlZA==" target="_blank">
+          <img src="/images/tomas.jpg" alt="tomas" height="480px">
+        </a>
+      </li>
+    </div>
+    
+    <div class="swiper-slide">
+      <li class="pet" data-size="Medium" data-age="Adult" data-sex="Female" data-castrated="true">
+        <a href="https://www.instagram.com/p/CtRFwgBNqP6/?
+        utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank"><img src="/images/kya.jpg" alt="" height="480px"></a>
+      </li>  
+    </div>
+    
+    <div class="swiper-slide">
+      <li class="pet" data-size="Large" data-age="Mature" data-sex="Male" data-castrated="true">
+        <a href="https://www.instagram.com/p/CsgJesWIaOl/?
+        utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank"><img src="/images/montanha.jpg" alt="" height="480px"></a>
+      </li>  
+    </div> 
+  </div>      
 </div>
-</div>
-</div>
+
 
 <footer>
 <div class="contatos">
@@ -84,7 +182,12 @@ width="30em" style="border-radius: 0.5em;"></a>
 </button> -->
 
 </div>
+
+</main>
+
 </footer>
+
+<script src="index.js"></script>
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+
 * {
 margin: 0;
 padding: 0;
@@ -256,7 +257,7 @@ body.night-mode {
   display: none;
 }
 
-#nightmode:checked + label > img {
+/* #nightmode:checked + label > img {
   animation: night forwards;
 }
 
@@ -268,7 +269,7 @@ body.night-mode {
   100% {
     transform: rotateY(180deg);
   }
-}
+} */
 
 /* #goup {
   padding: 0.01rem;
@@ -292,3 +293,4 @@ height: 60vh;
   color: #fff;
   }
 }
+

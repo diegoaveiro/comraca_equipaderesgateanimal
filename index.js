@@ -47,7 +47,7 @@ function changeImage3() {
   image.src = "./images/filterlight.png";
   }
   else {
-  image.src = "/images/filterdark.png";
+  image.src = "./images/filterdark.png";
 }
 }
 

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-
 * {
 margin: 0;
 padding: 0;
@@ -285,6 +284,7 @@ body.night-mode {
 width: 60vw;
 height: 60vh;
 }
+}
 
 @media (prefers-color-scheme: dark) {
   body {
@@ -292,21 +292,3 @@ height: 60vh;
   color: #fff;
   }
 }
-
-/* @media (max-width: 650px) {
-.swiper {
-width: 60vw;
-height: 60vh;
-}
-
-@media (max-width: 515px) {
-.swiper {
-width: 60vw;
-height: 60vh;
-}
-
-@media (max-width: 410px) {
-.swiper {
-height: 60vh;
-width: 60vw;
-} */

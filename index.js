@@ -139,11 +139,11 @@ function clearFilters() {
   // Check the stored color scheme preference on page load
   const storedColorScheme = localStorage.getItem('colorScheme');
   if (storedColorScheme === 'dark') {
-    myImageLogo.src = 'images/com_raca.jpg';
-    myImageDog.src = 'images/doglight.png';
-    myImageFilter.src = 'images/filterdark.png';
-  } else {
     myImageLogo.src = 'images/com_raca_dark.jpg';
     myImageDog.src = 'images/dogdark.png';
     myImageFilter.src = 'images/filterlight.png';
+  } else {
+    myImageLogo.src = 'images/com_raca.jpg';
+    myImageDog.src = 'images/doglight.png';
+    myImageFilter.src = 'images/filterdark.png';
   }
